@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job & Internship Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Job & Internship Tracker</h1>
+        <p>Track your job and internship applications in one place</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+            <h2>Application Dashboard</h2>
+
+            <div class="dashboard-cards">
+
+                <div class="card">
+                    <h3>Total Applications</h3>
+                    <p id="totalCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Applied</h3>
+                    <p id="appliedCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Interview</h3>
+                    <p id="interviewCount">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Selected</h3>
+                    <p id="selectedCount">0</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Add Application -->
+        <section class="form-section">
+
+            <h2>Add Application</h2>
+
+            <input
+                type="text"
+                id="company"
+                placeholder="Company Name"
+            >
+
+            <input
+                type="text"
+                id="role"
+                placeholder="Job / Internship Role"
+            >
+
+            <input
+                type="date"
+                id="date"
+            >
+
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Selected">Selected</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <button onclick="addApplication()">
+                + Add Application
+            </button>
+
+        </section>
+
+
+        <!-- Applications -->
+        <section class="applications-section">
+
+            <div class="section-heading">
+                <h2>My Applications</h2>
+                <span id="applicationCount">0 Applications</span>
+            </div>
+
+            <div id="applicationList">
+
+                <div class="empty-message">
+                    No applications added yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
